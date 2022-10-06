@@ -1,0 +1,36 @@
+ body::-webkit-scrollbar {
+    width: 0.4em;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #ef0a0a;
+  outline: 1px solid #ef0a0a;
+}
+.enquiry-now {
+    position: fixed;
+    right: 0;
+    z-index: 9999;
+    top: 55%;
+}
+.enquiry-now img {
+    width: 75%;
+    float: right;
+}
+.ball {animation: bounce 3s ease infinite alternate; -webkit-animation: bounce 3s ease infinite alternate; animation-delay: 0.5s; } @keyframes bounce { from { transform: translateY(0px); } to { transform: translateY(20px); } } @-webkit-keyframes bounce { from { transform: translateY(0px); } to { transform: translateY(-20px); } }
+.bounce {
+  animation: bounce_965 1.6s ease infinite;
+  transform-origin: 50% 50%;
+}
+@keyframes bounce_965 {
+  0% { transform:translateY(0) }
+  12.5% { transform:translateY(0) }
+  25% { transform:translateY(0) }
+  50% { transform:translateY(-15px) }
+  62.5% { transform:translateY(0) }
+  75% { transform:translateY(-15px) }
+  100% { transform:translateY(0) }
+}

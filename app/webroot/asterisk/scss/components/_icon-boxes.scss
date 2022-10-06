@@ -1,0 +1,229 @@
+/* =====================
+    Icon Boxes 
+========================*/
+
+.brook-icon-boxes-area{
+    .space_dec--110{
+
+        @media #{$md-layout} {
+            margin-top: 0;
+            padding-top: 80px;
+        }
+
+        @media #{$sm-layout} {
+            margin-top: 0;
+            padding-top: 80px;
+        }
+
+    }
+}
+
+.icon-box{
+    &.bg-transparant{
+        .inner{
+            background: transparent;
+        }            
+    }
+    .inner{
+        position: relative;
+        padding: 60px 35px 64px;
+        background: #fff;
+        z-index: 2;
+        -webkit-transition: all .3s cubic-bezier(.645,.045,.355,1);
+        transition: all .3s cubic-bezier(.645,.045,.355,1);
+        
+        &::before{
+            position: absolute;
+            content: "";
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 1px solid #eee;
+            opacity: 1;
+            visibility: visible;
+            z-index: -1;
+        }
+        .icon{
+            font-size: 80px;
+            margin-bottom: 22px;
+            color: $theme-color;
+            i{
+
+            }
+
+            &.brown-color{
+                color: $brown;
+            }
+        }
+        
+        .svg-icon{
+            .tm-svg{
+                padding: 10px 0 12px;
+                width: 60px;
+                margin: 0 auto;
+            }
+        }
+        .content{
+            h5 {
+                &.heading{
+                    margin-bottom: 18px;
+
+                }
+            }
+            p {
+
+            }
+            a {
+                &.icon-btn{
+                    margin-top: 46px;
+                    display: inline-block;
+                    color: $heading-color;
+                    -webkit-transition: all .3s cubic-bezier(.645,.045,.355,1);
+                    transition: all .3s cubic-bezier(.645,.045,.355,1);
+                    span{
+                        padding: 5px 0;
+                        font-weight: 600;
+                        font-size: 14px;
+                    }
+                    i{
+                        font-size: 12px;
+                        color: $theme-color;
+                        padding-left: 14px;
+                    }
+                    &:hover{
+                        color: $theme-color;
+                    }
+
+                    &.color-red{
+                        i{
+                            color: $red-color;
+                        }
+                        &:hover{
+                            color: $red-color;
+                        }
+                    }
+                }
+            }
+        }
+        &:hover{
+            -webkit-transform: translateY(-5px);
+            -ms-transform: translateY(-5px);
+            transform: translateY(-5px);
+            box-shadow: 0 2px 30px rgba(0,0,0,.1);
+        }
+    }
+
+
+    &.no-border{
+        .inner{
+            padding: 0;
+            &::before{
+                display: none;
+            }
+            &:hover{
+                -webkit-transform: translateY(-5px);
+                -ms-transform: translateY(-5px);
+                transform: translateY(-5px);
+                box-shadow: inherit;
+            }
+        }
+    }
+    &.with-padding{
+        .inner{
+            padding: 60px 35px 64px;
+
+            @media #{$md-layout} {
+                padding: 14px 21px 21px;
+            }
+
+            @media #{$sm-layout} {
+                padding: 10px 8px 32px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+/* =====================
+    Icon Box Style 
+========================*/
+
+
+.icon-grid-box{
+    grid-template-columns: repeat( 3,1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 50px;
+    width: 760px;
+    display: -ms-grid;
+    display: grid;
+    margin: auto;
+    margin-top: 60px;
+
+    @media #{$md-layout} {
+        width: auto;
+    }
+
+    @media #{$sm-layout} {
+        width: auto;
+        grid-row-gap: 30px;
+    }
+
+    @media #{$large-mobile} {
+        grid-template-columns: repeat( 1,1fr);
+    }
+
+    .bk-icon{
+        max-width: 160px;
+
+        @media #{$large-mobile} {
+            max-width: inherit;
+        }
+        .icon{
+            font-size: 80px;
+            width: 160px;
+            height: 160px;
+            display: inline-block;
+            border-radius: 50%;
+            color: #fff;
+            position: relative;
+
+            @media #{$sm-layout} {
+                width: 110px;
+                height: 110px;
+                font-size: 50px;
+            }
+
+            &.bg-color-1{
+                background: #e71361;
+            }
+            &.bg-color-2{
+                background: #ecb505;
+            }
+            &.bg-color-3{
+                background: #116cd7;
+            }
+
+            i{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%,-50%);
+                -ms-transform: translate(-50%,-50%);
+                transform: translate(-50%,-50%);
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+

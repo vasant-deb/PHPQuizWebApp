@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="SemiColonWeb" />
+
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Istok+Web:400,700" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+   
+    <link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+
+  
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   
+
+   
+    <link rel="stylesheet" href="demos/bike/bike.css" type="text/css" />
+
+
+    <title>Bike Rent Demo | Canvas</title>
+</head>
+
+<body class="stretched">
+
+    <div id="wrapper" class="clearfix">
+
+       
+    
+
+        <section id="content">
+            <div class="content-wrap nopadding">
+             
+              
+				<div class="section nobg topmargin-lg mb-0">
+                    <div class="container">
+                        <div class="heading-block divcenter center" style="max-width: 600px">
+                            <small class="text-black-50 uppercase ls3 t600">Our Service</small>
+                            <h2 class="capitalize t600 ls0 mb-1" style="font-size: 36px">How do you Get Bike</h2>
+                            <p>Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="row showcase-section align-items-center justify-content-between clearfix">
+                            <div class="col-lg-3 col-md-5">
+                                <ul class="nobottommargin">
+                                    <li class="showcase-feature showcase-feature-active" data-target="#target-1">
+                                        <h3>Choose Your Location.</h3>
+                                        <p>Credibly conceptualize backward-compatible interna visionary.</p>
+                                    </li>
+                                    <li class="showcase-feature" data-target="#target-2">
+                                        <h3>Choose Your Bike.</h3>
+                                        <p>Assertively engineer standardized interactive meta-services.</p>
+                                    </li>
+                                    <li class="showcase-feature" data-target="#target-3">
+                                        <h3>Get Confirmation Email.</h3>
+                                        <p>Holisticly customize fully synergistic e-business continually.</p>
+                                    </li>
+                                    <li class="showcase-feature" data-target="#target-4">
+                                        <h3 class="uppercase">Start Riding.</h3>
+                                        <p>Interactively without backward-compatible enable.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-8 col-md-7">
+                                <div id="target-1" class="showcase-target showcase-target-active">
+                                    <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8401081858365!2d144.95373095091972!3d-37.81721397965242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2s!4v1526558559407"
+                                        data-lightbox="iframe">
+<img src="demos/bike/images/mockups/1.jpg" alt="">
+</a>
+                                </div>
+                                <div id="target-2" class="showcase-target">
+                                    <img class="rounded" src="demos/bike/images/mockups/2.jpg" alt="">
+                                </div>
+                                <div id="target-3" class="showcase-target">
+                                    <img class="rounded" src="demos/bike/images/mockups/3.jpg" alt="">
+                                </div>
+                                <div id="target-4" class="showcase-target">
+                                    <div class="rounded" style="background: url('demos/bike/images/mockups/4.jpg') bottom center / 100% auto; min-height: 500px;">
+                                        <div class="row dark nomargin">
+                                            <div class="col-lg-5 rounded py-5 px-4" style="background-color: rgba(0,0,0,0.5);">
+                                                <h2 class="display-5 mb-0">Ride Away.</h2>
+                                                <hr>
+                                                <p class="lead d-none d-md-block nobottommargin">In Style. With Confidence. Eco-Friendly Way.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           
+            </div>
+        </section>
+
+     
+   </div>
+
+ 
+
+    <script src="js/jquery.js"></script>
+
+   
+
+    <script src="js/functions.js"></script>
+    <script>
+        
+
+
+        function showcaseSection(element) {
+
+            var otherElements = element.parents('.showcase-section').find('.showcase-feature'),
+                elementTarget = jQuery(element.attr('data-target')),
+                otherTargets = element.parents('.showcase-section').find('.showcase-target');
+
+            otherElements.removeClass('showcase-feature-active');
+            element.addClass('showcase-feature-active');
+            otherTargets.removeClass('showcase-target-active');
+            elementTarget.addClass('showcase-target-active');
+
+        }
+
+        jQuery('.showcase-feature').hover(function() {
+            showcaseSection(jQuery(this));
+        });
+
+       
+    </script>
+</body>
+
+</html>

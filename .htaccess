@@ -1,0 +1,19 @@
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.engagegeeks.com/$1 [R,L]
+
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	# Uncomment if you have a .well-known directory in the root folder, e.g. for the Let's Encrypt challenge
+	# https://tools.ietf.org/html/rfc5785
+	#RewriteRule ^(\.well-known/.*)$ $1 [L]
+	RewriteRule ^$ app/webroot/ [L]
+	RewriteRule (.*) app/webroot/$1 [L]
+</IfModule>
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php56” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php56___lsphp .php .php5 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
